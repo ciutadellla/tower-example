@@ -1,0 +1,13 @@
+---
+- name: Docker Prune
+  hosts: your_target_hosts
+  become: true  # Run tasks with sudo or as a privileged user
+
+  tasks:
+    - name: Ensure Docker is installed
+      apt:
+        name: docker-ce
+        state: present  # You can modify this based on your package manager
+
+    - name: Run Docker Prune
+      command: docker system prune --force
