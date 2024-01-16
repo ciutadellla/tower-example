@@ -1,6 +1,6 @@
 ---
 - name: Docker Prune
-  hosts: your_target_hosts
+  hosts: all
   become: true  # Run tasks with sudo or as a privileged user
 
   tasks:
